@@ -1,6 +1,6 @@
-package com.group.libraryapp.dto.user.response;
+package com.group.libraryapp.controller.libraryapp.dto.user.response;
 
-import com.group.libraryapp.domain.User;
+import com.group.libraryapp.controller.libraryapp.domain.User;
 
 public class UserResponse {
     final private long id;
