@@ -50,3 +50,4 @@ gradle-app.setting
 
 # Intellj
 .idea
+.vscode
