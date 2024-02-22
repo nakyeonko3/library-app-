@@ -27,7 +27,6 @@ public class CalculatorController {
     }
 //
 
-
     @PostMapping("/sum")
     public Integer sum(@RequestBody CalculatorSumRequest request){
         return request.getNumbers().stream().reduce(Integer::sum).get();
