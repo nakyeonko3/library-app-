@@ -1,14 +1,16 @@
 package com.group.calculatorapp.dto.response;
 
+import com.group.calculatorapp.dto.request.CalculatorRequest;
+
 public class CalculatorResponse {
     final private Integer add;
     final private Integer minus;
     final private Integer multiply;
 
-    public CalculatorResponse(Integer addedResult, Integer minusedResult, Integer multipliedResult) {
-        this.add = addedResult;
-        this.minus = minusedResult;
-        this.multiply = multipliedResult;
+    public CalculatorResponse(CalculatorRequest request) {
+        this.add = request.getNum1() + request.getNum2();
+        this.minus = request.getNum1() - request.getNum2();
+        this.multiply = request.getNum1() * request.getNum2();
     }
 
     public Integer getAdd() {

@@ -6,8 +6,8 @@ import java.time.LocalDate;
 public class CalculatorDayOfWeek {
     final private DayOfWeek dayOfTheWeek;
 
-    public CalculatorDayOfWeek(String date) {
-        this.dayOfTheWeek = LocalDate.parse(date).getDayOfWeek();
+    public CalculatorDayOfWeek(LocalDate date) {
+        this.dayOfTheWeek = date.getDayOfWeek();
     }
 
     public DayOfWeek getDayOfTheWeek() {

@@ -12,9 +12,9 @@ public class CalculatorSumRequest {
 
     public CalculatorSumRequest(){}
 
-//    public NumbersSumRequest(List<Integer> numbers) {
-//        this.numbers = numbers;
-//    }
+    public CalculatorSumRequest(List<Integer> numbers) {
+        this.numbers = numbers;
+    }
 
     public List<Integer> getNumbers() {
         return numbers;
