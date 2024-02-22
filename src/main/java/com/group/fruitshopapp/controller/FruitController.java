@@ -48,10 +48,6 @@ public class FruitController {
 
     @GetMapping("/stat")
     public FruitGetStatResponse getStatOfFruit(@RequestParam String name) {
-        // String format이라는 방법이 있는데 왜 안 썼을까?
-// SELECT isSold, SUM(price) as SUM from fruit WHERE name = '사과' GROUP BY isSold;
-//        String sql = String.format("SELECT isSold, SUM(price) as SUM from fruit WHERE name = %S GROUP BY isSold",name);
-//        jdbcTemplate.update(sql);
         String sql = "SELECT isSold, SUM(price) as SUM from fruit WHERE name = ? GROUP BY isSold";
 
         Map<Boolean, Long> resultmap = new HashMap<>();
@@ -63,6 +59,5 @@ public class FruitController {
         }, name);
         return new FruitGetStatResponse(resultmap.get(true), resultmap.get(false));
     }
-// 추가적인 연산(예를 들자면 100개 이상인 과일 값들만 가져온다거나 가능하게 바꿔 보기
 
 }
