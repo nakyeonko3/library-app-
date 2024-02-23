@@ -1,15 +1,15 @@
 package com.group.libraryapp.dto.user.request;
 
 public class UserUpdateRequest {
-    private final Integer id;
+    private final Long id;
     private final String name;
 
-    public UserUpdateRequest(Integer id, String name) {
+    public UserUpdateRequest(Long id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 

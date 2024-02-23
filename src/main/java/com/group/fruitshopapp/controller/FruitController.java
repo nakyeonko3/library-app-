@@ -53,5 +53,4 @@ public class FruitController {
         }, name);
         return new FruitGetStatResponse(resultmap.get(true), resultmap.get(false));
     }
-
 }

@@ -7,9 +7,11 @@ import java.time.LocalDate;
 
 public class FruitUpdateRequest {
 
-    final private Long id;
+    private Long id;
 
-    @JsonCreator
+    public FruitUpdateRequest(){
+
+    }
     public FruitUpdateRequest(Long id) {
         this.id = id;
     }
