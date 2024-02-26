@@ -7,5 +7,5 @@ import lombok.Getter;
 @AllArgsConstructor
 public class Book {
     final private String name;
-    final private Integer price;
+    final private Long price;
 }

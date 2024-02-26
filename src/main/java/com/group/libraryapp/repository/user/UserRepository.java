@@ -50,4 +50,6 @@ public class UserRepository {
                 .isEmpty();
     }
 
+    public static class BookRepository {
+    }
 }
