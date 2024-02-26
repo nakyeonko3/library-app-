@@ -14,9 +14,9 @@ import java.util.List;
 public class UserController {
     private final UserService userService;
 
-    public UserController(JdbcTemplate jdbcTemplate) {
+    public UserController(UserService userService) {
 
-        this.userService = new UserService(jdbcTemplate);
+        this.userService = userService;
     }
 
     @PostMapping("/user")
