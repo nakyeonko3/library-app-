@@ -15,10 +15,12 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'com.h2database:h2'
+    implementation 'org.projectlombok:lombok:1.18.26'
+    runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'mysql:mysql-connector-java'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	annotationProcessor 'org.projectlombok:lombok:1.18.26'
 }
 
 tasks.named('test') {
