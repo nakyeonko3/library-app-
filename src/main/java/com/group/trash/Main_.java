@@ -1,19 +1,12 @@
 package com.group.trash;
 
-<<<<<<< HEAD
-=======
+
 import com.group.Diceapp.controller.DiceController;
 
->>>>>>> origin/main
 import java.util.Scanner;
 
 public class Main_ {
     public static void main(String[] args) {
-<<<<<<< HEAD
-=======
-        DiceController diceGameController = new DiceController();
-        diceGameController.getDiceNumber();
->>>>>>> origin/main
         System.out.println("숫자를 입력하세요");
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
@@ -36,21 +29,14 @@ public class Main_ {
                 r6++;
             }
         }
-<<<<<<< HEAD
-        System.out.printf("1은 %d번 나왔습니다, \n", r1);
-        System.out.printf("2은 %d번 나왔습니다, \n", r2);
-        System.out.printf("3은 %d번 나왔습니다, \n", r3);
-        System.out.printf("4은 %d번 나왔습니다, \n", r4);
-        System.out.printf("5은 %d번 나왔습니다, \n", r5);
-        System.out.printf("6은 %d번 나왔습니다, \n", r6);
-=======
+
         System.out.printf("1은 %d번 나왔습니다, \n",r1);
         System.out.printf("2은 %d번 나왔습니다, \n",r2);
         System.out.printf("3은 %d번 나왔습니다, \n",r3);
         System.out.printf("4은 %d번 나왔습니다, \n",r4);
         System.out.printf("5은 %d번 나왔습니다, \n",r5);
         System.out.printf("6은 %d번 나왔습니다, \n",r6);
->>>>>>> origin/main
+
 
     }
 }
