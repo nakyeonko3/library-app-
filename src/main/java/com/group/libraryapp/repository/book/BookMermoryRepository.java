@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Primary
-@Repository
+//@Primary
+//@Repository
 public class BookMermoryRepository implements BookRepository{
     List<Book> books = new ArrayList<Book>();
     @Override
