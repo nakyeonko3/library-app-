@@ -3,8 +3,10 @@ package com.group.fruitshopapp.controller;
 import com.group.fruitshopapp.dto.FruitCreateRequest;
 import com.group.fruitshopapp.dto.FruitGetStatResponse;
 import com.group.fruitshopapp.dto.FruitUpdateRequest;
+import com.group.fruitshopapp.service.FruitService;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,44 +15,25 @@ import java.util.Map;
 @RequestMapping("/api/v1/fruit")
 public class FruitController {
     private final JdbcTemplate jdbcTemplate;
+    private final FruitService fruitService;
 
-    public FruitController(JdbcTemplate jdbcTemplate) {
+    public FruitController(JdbcTemplate jdbcTemplate , FruitService fruitService) {
         this.jdbcTemplate = jdbcTemplate;
+        this.fruitService = fruitService;
     }
 
     @PostMapping
     public void createFruit(@RequestBody FruitCreateRequest request) {
-        String sql = "INSERT INTO fruit(name, warehousingDate, price) VALUES (?,?,?)";
-        jdbcTemplate.update(sql, request.getName(), request.getWarehousingDate(), request.getPrice());
+        fruitService.createFruit(request);
     }
 
     @PutMapping
     public void updateFruit(@RequestBody FruitUpdateRequest request) {
-        System.out.println(request.getId());
-
-        // 해당 id가 fruit 테이블 안에 존재하는지 검색하고 없다면 IllegalArgumentException 예외를 발생시킴
-        String sqlRead = "SELECT * FROM fruit WHERE id = ?";
-        boolean isFruitNotExist = jdbcTemplate.query(sqlRead, (rs, rowNum) -> 0, request.getId())
-                .isEmpty();
-        if (isFruitNotExist) {
-            throw new IllegalArgumentException();
-        }
-
-        String sqlUpdate = "UPDATE fruit SET isSold = True WHERE id = ?";
-        jdbcTemplate.update(sqlUpdate, request.getId());
+        fruitService.updateFruit(request);
     }
 
     @GetMapping("/stat")
     public FruitGetStatResponse getStatOfFruit(@RequestParam String name) {
-        String sql = "SELECT isSold, SUM(price) as SUM from fruit WHERE name = ? GROUP BY isSold";
-
-        Map<Boolean, Long> resultmap = new HashMap<>();
-        jdbcTemplate.query(sql, (rs, rowNum) -> {
-            boolean isSold = rs.getBoolean("isSold");
-            long price = rs.getLong("SUM");
-            resultmap.put(isSold, price);
-            return null;
-        }, name);
-        return new FruitGetStatResponse(resultmap.get(true), resultmap.get(false));
+        return fruitService.getStatOfFruit(name);
     }
 }

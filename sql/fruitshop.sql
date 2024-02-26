@@ -1,6 +1,17 @@
 create database fruitShop;
 use fruitShop;
 
+#전체 확인
+select * from fruit;
+
+#전체 삭제
+DELETE
+FROM fruit;
+
+# id auto_increment reset초기화
+ALTER TABLE fruit
+    AUTO_INCREMENT = 1;
+
 
 create table fruit
 (
@@ -77,13 +88,8 @@ WHERE id = 2;
 
 # "DELETE FROM user WHERE name =?";
 
-#전체 삭제
-DELETE
-FROM fruit;
 
-# id auto_increment rest
-ALTER TABLE fruit
-    AUTO_INCREMENT = 1;
+
 
 
 DROP TABLE fruit;

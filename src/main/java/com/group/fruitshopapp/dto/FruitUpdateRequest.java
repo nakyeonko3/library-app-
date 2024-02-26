@@ -1,22 +1,14 @@
 package com.group.fruitshopapp.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 
-import java.time.LocalDate;
-
+@Getter
 public class FruitUpdateRequest {
+    private final Long id;
 
-    private Long id;
-
-    public FruitUpdateRequest(){
-
-    }
+    @JsonCreator
     public FruitUpdateRequest(Long id) {
         this.id = id;
-    }
-
-    public Long getId() {
-        return id;
     }
 }
