@@ -1,15 +1,18 @@
 package com.group.fruitshopapp.dto;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+
 
 public class FruitCreateRequest {
     private final String name;
     private final LocalDate warehousingDate;
     private final long price;
 
-    public FruitCreateRequest(String name, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)LocalDate localDate, long price) {
+    public FruitCreateRequest(String name, LocalDate localDate, long price) {
         this.name = name;
         this.warehousingDate = localDate;
         this.price = price;
