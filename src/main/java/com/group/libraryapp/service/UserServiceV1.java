@@ -3,19 +3,19 @@ package com.group.libraryapp.service;
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
 import com.group.libraryapp.dto.user.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.response.UserResponse;
+import com.group.libraryapp.repository.user.UserJdbcRepository;
 import com.group.libraryapp.repository.user.UserRepository;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UserService {
+public class UserServiceV1 {
 
-    private final UserRepository userRepository;
+    private final UserJdbcRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserServiceV1(UserJdbcRepository userJdbcRepository) {
+        this.userRepository = userJdbcRepository;
     }
 
     public void saveUser(UserCreateRequest request){

@@ -1,24 +1,35 @@
 package com.group.libraryapp.domain;
 
-import java.text.Format;
+import lombok.Getter;
 
+import javax.persistence.*;
+
+@Entity
+@Getter
 public class User {
-    final private Integer age;
-    final private String name;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(nullable = false, length = 20)
+    private String name;
+    private Integer age;
+
 
     public User(Integer age, String name) {
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException(String.format("잘못된 name(%s)이 들어 왔습니다."));
+            throw new IllegalArgumentException("잘못된 name(%s)이 들어 왔습니다.");
         }
         this.age = age;
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    protected User() {
     }
 
-    public String getName() {
-        return name;
+    public void updateName(String name){
+        this.name = name;
     }
+
 }

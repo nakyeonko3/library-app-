@@ -4,42 +4,43 @@ package com.group.libraryapp.controller;
 import com.group.libraryapp.dto.user.request.UserCreateRequest;
 import com.group.libraryapp.dto.user.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.response.UserResponse;
-import com.group.libraryapp.service.FruitService;
-import com.group.libraryapp.service.UserService;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.jdbc.core.JdbcTemplate;
+import com.group.libraryapp.service.UserServiceV2;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 public class UserController {
-    private final UserService userService;
-    private final FruitService fruitService;
+    private final UserServiceV2 userServiceV2;
 
-    public UserController(UserService userService, @Qualifier("appleService")FruitService fruitService) {
-        this.fruitService = fruitService;
-        this.userService = userService;
+    public UserController(UserServiceV2 userService) {
+        this.userServiceV2 = userService;
     }
 
     @PostMapping("/user")
     public void saveUser(@RequestBody UserCreateRequest request) {
-        userService.saveUser(request);
+        userServiceV2.saveUser(request);
     }
 
     @GetMapping("/user")
     public List<UserResponse> getUsers() {
-        return userService.getUsers();
+        return userServiceV2.getUsers();
     }
 
     @PutMapping("/user")
     public void updateUser(@RequestBody UserUpdateRequest request) {
-        userService.updateUser(request);
+        userServiceV2.updateUser(request);
     }
 
     @DeleteMapping("/user")
     public void deleteUser(@RequestParam String name) {
-        userService.deleteUser(name);
+        userServiceV2.deleteUser(name);
     }
+
+    @GetMapping("/users/age")
+    public List<UserResponse> getUsersByAge(@RequestParam int startage, @RequestParam int endage){
+        return userServiceV2.getUsersByAge(startage, endage);
+    }
+
 
 }

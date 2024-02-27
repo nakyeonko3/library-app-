@@ -1,11 +1,13 @@
 package com.group.libraryapp.dto.user.response;
 
 import com.group.libraryapp.domain.User;
+import lombok.Getter;
 
+@Getter
 public class UserResponse {
-    final private long id;
-    final private String name;
-    final private Integer age;
+    private long id;
+    private String name;
+    private Integer age;
 
     public UserResponse(Integer id, User user) {
         this.id = id;
@@ -19,11 +21,9 @@ public class UserResponse {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Integer getAge() {
-        return age;
+    public UserResponse(User user) {
+        this.id = user.getId();
+        this.age = user.getAge();
+        this.name = user.getName();
     }
 }
