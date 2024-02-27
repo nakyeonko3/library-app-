@@ -3,16 +3,15 @@ package com.group.fruitshopapp.service;
 import com.group.fruitshopapp.dto.FruitCreateRequest;
 import com.group.fruitshopapp.dto.FruitGetStatResponse;
 import com.group.fruitshopapp.dto.FruitUpdateRequest;
-import com.group.fruitshopapp.repository.FruitMySqlRepository;
-import com.group.fruitshopapp.repository.FruitRepository;
+import com.group.fruitshopapp.repository.jdbcRepo.FruitJdbcRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FruitService {
+public class FruitServiceV1 {
 
-    private final FruitRepository fruitRepository;
+    private final FruitJdbcRepository fruitRepository;
 
-    public FruitService(FruitRepository fruitRepository) {
+    public FruitServiceV1(FruitJdbcRepository fruitRepository) {
         this.fruitRepository = fruitRepository;
     }
 

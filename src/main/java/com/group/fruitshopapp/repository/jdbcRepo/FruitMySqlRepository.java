@@ -1,8 +1,9 @@
-package com.group.fruitshopapp.repository;
+package com.group.fruitshopapp.repository.jdbcRepo;
 
 import com.group.fruitshopapp.dto.FruitCreateRequest;
 import com.group.fruitshopapp.dto.FruitGetStatResponse;
 import com.group.fruitshopapp.dto.FruitUpdateRequest;
+import com.group.fruitshopapp.repository.jdbcRepo.FruitJdbcRepository;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -12,7 +13,7 @@ import java.util.Map;
 
 @Primary
 @Repository
-public class FruitMySqlRepository implements FruitRepository{
+public class FruitMySqlRepository implements FruitJdbcRepository {
     private final JdbcTemplate jdbcTemplate;
 
     public FruitMySqlRepository(JdbcTemplate jdbcTemplate) {
