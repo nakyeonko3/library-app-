@@ -19,10 +19,11 @@ public class Fruit {
     @Column(nullable = false, length = 20)
     private String name;
 
-    @Column(name="warehousing_date")
-    private LocalDate warehousingDate;
 
     private long price;
+
+    @Column(name="warehousing_date")
+    private LocalDate warehousingDate;
 
     @Column(nullable = false)
     private boolean isSold= false;

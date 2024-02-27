@@ -2,7 +2,7 @@ package com.group.fruitshopapp.repository.jdbcRepo;
 
 import com.group.fruitshopapp.domain.Fruit;
 import com.group.fruitshopapp.dto.request.FruitCreateRequest;
-import com.group.fruitshopapp.dto.request.FruitGetStatResponse;
+import com.group.fruitshopapp.dto.response.FruitGetStatResponse;
 import com.group.fruitshopapp.dto.request.FruitUpdateRequest;
 import org.springframework.stereotype.Repository;
 
@@ -73,7 +73,7 @@ public class FruitMemoryRepository implements FruitJdbcRepository {
     }
     private Fruit findFruitById(Long id) {
         for (Fruit fruit : fruits) {
-            if (fruit.getId() == id) {
+            if (fruit.getId().equals(id)) {
                 return fruit;
             }
         }

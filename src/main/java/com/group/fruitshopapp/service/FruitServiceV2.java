@@ -2,18 +2,21 @@ package com.group.fruitshopapp.service;
 
 import com.group.fruitshopapp.domain.Fruit;
 import com.group.fruitshopapp.dto.request.FruitCreateRequest;
-import com.group.fruitshopapp.dto.response.FruitGetCountResponse;
-import com.group.fruitshopapp.dto.request.FruitGetStatResponse;
+import com.group.fruitshopapp.dto.request.FruitGetPriceListRequest;
 import com.group.fruitshopapp.dto.request.FruitUpdateRequest;
+import com.group.fruitshopapp.dto.response.FruitGetCountResponse;
+import com.group.fruitshopapp.dto.response.FruitGetStatResponse;
+import com.group.fruitshopapp.repository.jpaRepo.FruitGetListProjection;
 import com.group.fruitshopapp.repository.jpaRepo.FruitJpaRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
+
+
 @Service
 public class FruitServiceV2 {
-    private FruitJpaRepository fruitJpaRepository;
+    final private FruitJpaRepository fruitJpaRepository;
 
     public FruitServiceV2(FruitJpaRepository fruitJpaRepository) {
         this.fruitJpaRepository = fruitJpaRepository;
@@ -32,12 +35,12 @@ public class FruitServiceV2 {
 
     public FruitGetStatResponse getStatOfFruit(String name) {
 
-        List<Fruit>fruits = fruitJpaRepository.findAllByName(name);
+        List<Fruit> fruits = fruitJpaRepository.findAllByName(name);
         long salesAmount = 0L;
         long notSalseAmount = 0L;
 
         for (Fruit fruit1 : fruits) {
-            if(fruit1.isSold()){
+            if (fruit1.isSold()) {
                 salesAmount += fruit1.getPrice();
             } else {
                 notSalseAmount += fruit1.getPrice();
@@ -47,18 +50,24 @@ public class FruitServiceV2 {
     }
 
 
-    public FruitGetCountResponse getfruitGetCountByIsSold(String name){
-        List<Fruit>fruits = fruitJpaRepository.findAllByName(name);
+    public FruitGetCountResponse getFruitsCountByIsSold(String name) {
+        List<Fruit> fruits = fruitJpaRepository.findAllByName(name);
         long count = 0L;
 
         for (Fruit fruit1 : fruits) {
-            if(fruit1.isSold()){
-                count ++;
+            if (fruit1.isSold()) {
+                count++;
             }
         }
         return new FruitGetCountResponse(count);
     }
 
-
-
+    public List<FruitGetListProjection> getFruitsPriceList(FruitGetPriceListRequest request) {
+        if (request.getOption()
+                .equals("GTE")) {
+            return fruitJpaRepository.findAllByPriceGreaterThan(request.getPrice());
+        } else {
+            return fruitJpaRepository.findAllByPriceLessThan(request.getPrice());
+        }
+    }
 }

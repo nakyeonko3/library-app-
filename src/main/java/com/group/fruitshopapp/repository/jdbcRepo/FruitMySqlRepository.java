@@ -1,7 +1,7 @@
 package com.group.fruitshopapp.repository.jdbcRepo;
 
 import com.group.fruitshopapp.dto.request.FruitCreateRequest;
-import com.group.fruitshopapp.dto.request.FruitGetStatResponse;
+import com.group.fruitshopapp.dto.response.FruitGetStatResponse;
 import com.group.fruitshopapp.dto.request.FruitUpdateRequest;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
