@@ -1,10 +1,10 @@
-package com.group.fruitshopapp.repository;
+package com.group.fruitshopapp.repository.jdbcRepo;
 
 import com.group.fruitshopapp.domain.Fruit;
 import com.group.fruitshopapp.dto.FruitCreateRequest;
 import com.group.fruitshopapp.dto.FruitGetStatResponse;
 import com.group.fruitshopapp.dto.FruitUpdateRequest;
-import org.springframework.context.annotation.Primary;
+import com.group.fruitshopapp.repository.jdbcRepo.FruitJdbcRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.List;
 
 //@Primary
 @Repository
-public class FruitMemoryRepository implements FruitRepository{
+public class FruitMemoryRepository implements FruitJdbcRepository {
     private final List<Fruit> fruits = new ArrayList<>();
     private Long nextId = 1L;
 

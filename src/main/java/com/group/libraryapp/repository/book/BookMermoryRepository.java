@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 //@Primary
-//@Repository
+@Repository
 public class BookMermoryRepository implements BookRepository{
     List<Book> books = new ArrayList<Book>();
     @Override

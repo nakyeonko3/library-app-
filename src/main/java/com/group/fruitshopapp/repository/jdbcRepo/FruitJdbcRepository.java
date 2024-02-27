@@ -1,14 +1,10 @@
-package com.group.fruitshopapp.repository;
+package com.group.fruitshopapp.repository.jdbcRepo;
 
 import com.group.fruitshopapp.dto.FruitCreateRequest;
 import com.group.fruitshopapp.dto.FruitGetStatResponse;
 import com.group.fruitshopapp.dto.FruitUpdateRequest;
-import org.springframework.web.bind.annotation.PutMapping;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public interface FruitRepository {
+public interface FruitJdbcRepository {
     public void createFruit(FruitCreateRequest request);
 
     public void updateFruit(FruitUpdateRequest request);
