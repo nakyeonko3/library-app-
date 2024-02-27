@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-
 @Service
 public class FruitServiceV2 {
     final private FruitJpaRepository fruitJpaRepository;
@@ -66,8 +65,11 @@ public class FruitServiceV2 {
         if (request.getOption()
                 .equals("GTE")) {
             return fruitJpaRepository.findAllByPriceGreaterThan(request.getPrice());
-        } else {
+        } else if (request.getOption()
+                .equals("LTE")) {
             return fruitJpaRepository.findAllByPriceLessThan(request.getPrice());
+        } else {
+            throw new IllegalArgumentException();
         }
     }
 }
