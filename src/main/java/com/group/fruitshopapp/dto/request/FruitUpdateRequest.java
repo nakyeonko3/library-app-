@@ -1,4 +1,4 @@
-package com.group.fruitshopapp.dto;
+package com.group.fruitshopapp.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.Getter;

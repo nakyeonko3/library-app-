@@ -1,10 +1,9 @@
 package com.group.fruitshopapp.repository.jdbcRepo;
 
 import com.group.fruitshopapp.domain.Fruit;
-import com.group.fruitshopapp.dto.FruitCreateRequest;
-import com.group.fruitshopapp.dto.FruitGetStatResponse;
-import com.group.fruitshopapp.dto.FruitUpdateRequest;
-import com.group.fruitshopapp.repository.jdbcRepo.FruitJdbcRepository;
+import com.group.fruitshopapp.dto.request.FruitCreateRequest;
+import com.group.fruitshopapp.dto.request.FruitGetStatResponse;
+import com.group.fruitshopapp.dto.request.FruitUpdateRequest;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

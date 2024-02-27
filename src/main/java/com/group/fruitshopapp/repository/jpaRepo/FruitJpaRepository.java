@@ -1,12 +1,8 @@
 package com.group.fruitshopapp.repository.jpaRepo;
 
 import com.group.fruitshopapp.domain.Fruit;
-import com.group.fruitshopapp.dto.FruitGetStatResponse;
-import com.group.fruitshopapp.dto.FruitUpdateRequest;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

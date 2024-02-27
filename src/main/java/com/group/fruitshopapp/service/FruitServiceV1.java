@@ -1,8 +1,8 @@
 package com.group.fruitshopapp.service;
 
-import com.group.fruitshopapp.dto.FruitCreateRequest;
-import com.group.fruitshopapp.dto.FruitGetStatResponse;
-import com.group.fruitshopapp.dto.FruitUpdateRequest;
+import com.group.fruitshopapp.dto.request.FruitCreateRequest;
+import com.group.fruitshopapp.dto.request.FruitGetStatResponse;
+import com.group.fruitshopapp.dto.request.FruitUpdateRequest;
 import com.group.fruitshopapp.repository.jdbcRepo.FruitJdbcRepository;
 import org.springframework.stereotype.Service;
 

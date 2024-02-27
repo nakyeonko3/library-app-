@@ -1,10 +1,8 @@
 package com.group.fruitshopapp.controller;
 
-import com.group.fruitshopapp.dto.FruitCreateRequest;
-import com.group.fruitshopapp.dto.FruitGetStatResponse;
-import com.group.fruitshopapp.dto.FruitUpdateRequest;
-import com.group.fruitshopapp.service.FruitServiceV1;
-import org.springframework.web.bind.annotation.*;
+import com.group.fruitshopapp.dto.request.FruitCreateRequest;
+import com.group.fruitshopapp.dto.request.FruitGetStatResponse;
+import com.group.fruitshopapp.dto.request.FruitUpdateRequest;
 
 public interface FruitController {
     public void createFruit(FruitCreateRequest request);

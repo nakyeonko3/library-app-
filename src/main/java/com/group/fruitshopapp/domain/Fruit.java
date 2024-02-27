@@ -1,6 +1,6 @@
 package com.group.fruitshopapp.domain;
 
-import com.group.fruitshopapp.dto.FruitCreateRequest;
+import com.group.fruitshopapp.dto.request.FruitCreateRequest;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,4 +1,4 @@
-package com.group.fruitshopapp.dto;
+package com.group.fruitshopapp.dto.request;
 
 public class FruitGetStatResponse {
     private final Long salesAmount;

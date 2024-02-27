@@ -1,4 +1,4 @@
-package com.group.fruitshopapp.dto;
+package com.group.fruitshopapp.dto.request;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

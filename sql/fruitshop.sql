@@ -28,6 +28,9 @@ create table fruit
 
 # start transaction;
 
+select count(*)
+from fruit where is_sold = true;
+
 insert INTO fruit(name, warehousing_date, price, is_sold)
 VALUES ('사과',
         STR_TO_DATE('2024-02-01', '%Y-%m-%d'),
