@@ -1,9 +1,9 @@
-package com.group.libraryapp.service;
+package com.group.libraryapp.service.fruit;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 @Primary
 @Service
-public class BananaService implements FruitService{
+public class BananaService implements FruitService {
 }
