@@ -1,4 +1,4 @@
-package com.group.libraryapp.dto.user.request;
+package com.group.libraryapp.dto.user.request.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

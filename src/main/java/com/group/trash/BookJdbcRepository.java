@@ -1,15 +1,13 @@
-package com.group.libraryapp.repository.book;
+package com.group.trash;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-@Primary
 @Repository
-public class BookMySqlRepository implements BookRepository {
+public class BookJdbcRepository implements BookJdbcRepositoryimpl {
     JdbcTemplate jdbcTemplate;
 
-    public BookMySqlRepository(JdbcTemplate jdbcTemplate) {
+    public BookJdbcRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 

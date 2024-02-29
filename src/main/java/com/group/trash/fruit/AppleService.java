@@ -1,4 +1,4 @@
-package com.group.libraryapp.service.fruit;
+package com.group.trash.fruit;
 
 import org.springframework.stereotype.Service;
 

@@ -8,6 +8,15 @@ commit;
 select *
 from user;
 
+ALTER TABLE user
+    drop name;
+
+ALTER TABLE user
+    add name varchar(255);
+
+ALTER TABLE user
+    ADD UNIQUE KEY (name);
+
 
 start transaction;
 insert into user (name, age)

@@ -9,7 +9,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false, length = 20)
+    @Column(unique = true, nullable = false, length = 20)
     private String name;
     private Integer age;
 
@@ -25,7 +25,7 @@ public class User {
     protected User() {
     }
 
-    public void updateName(String name){
+    public void updateName(String name) {
         this.name = name;
     }
 

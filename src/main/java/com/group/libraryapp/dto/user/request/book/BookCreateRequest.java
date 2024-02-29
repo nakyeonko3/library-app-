@@ -1,14 +1,12 @@
-package com.group.libraryapp.dto.user.request;
+package com.group.libraryapp.dto.user.request.book;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
-public class UserUpdateRequest {
-    private Long id;
+@AllArgsConstructor
+public class BookCreateRequest {
     private String name;
 }
