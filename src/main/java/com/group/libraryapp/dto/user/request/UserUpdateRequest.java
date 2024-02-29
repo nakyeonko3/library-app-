@@ -1,19 +1,14 @@
 package com.group.libraryapp.dto.user.request;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserUpdateRequest {
-    private final Long id;
-    private final String name;
-
-    public UserUpdateRequest(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
+    private Long id;
+    private String name;
 }

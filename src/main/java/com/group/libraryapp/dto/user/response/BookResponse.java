@@ -1,4 +1,4 @@
-package com.group.libraryapp.dto;
+package com.group.libraryapp.dto.user.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -16,7 +16,6 @@ public class BookService {
         if(name.isEmpty() && price != null) {
             throw new IllegalArgumentException();
         }
-
         bookRepository.saveBook(name, price);
     }
 }

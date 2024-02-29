@@ -1,11 +1,8 @@
 package com.group.libraryapp.domain;
 
-import lombok.Getter;
-
 import javax.persistence.*;
 
 @Entity
-@Getter
 public class User {
 
     @Id
@@ -32,4 +29,15 @@ public class User {
         this.name = name;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
 }

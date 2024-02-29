@@ -33,11 +33,9 @@ public class FruitServiceV2 {
     }
 
     public FruitGetStatResponse getStatOfFruit(String name) {
-
         List<Fruit> fruits = fruitJpaRepository.findAllByName(name);
         long salesAmount = 0L;
         long notSalseAmount = 0L;
-
         for (Fruit fruit1 : fruits) {
             if (fruit1.isSold()) {
                 salesAmount += fruit1.getPrice();
