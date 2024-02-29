@@ -1,14 +1,16 @@
 use library;
-create table books
-(
-    id    bigint auto_increment,
-    name  varchar(25),
-    price bigint,
+
+create table book(
+    id bigint auto_increment,
+    name varchar(255),
     primary key (id)
 );
 
-INSERT INTO books(name, price)
-values ('파이썬알고리즘인터뷰', 25000);
+insert into book(name)
+values ('토비의스프링');
 
-SELECT id, name, price FROM books;
-delete from books;
+select * from book;
+
+delete
+from book
+where name = '토비의스프링';
