@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello, World!</h1>
+<div class="tmp">
+
+</div>
+<script>
+    const tmp = document.querySelector(".tmp");
+    tmp.innerHTML = "Fuck You!";
+    console.log("Hello, World!");
+    (async () => {
+        try {
+            const response = await fetch("http://localhost:8080/book/list");
+            const bookList = await response.json();
+           bookList.forEach(data => {
+               const div1 = document.createElement("div");
+               div1.innerText = `${data.id} | ${data.name}`;
+               tmp.appendChild(div1)
+           })
+        } catch (error) {
+            console.log(error)
+        }
+    })();
+
+</script>
+</body>
+</html>
