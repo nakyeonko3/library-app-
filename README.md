@@ -3,6 +3,7 @@
 
 ## 버전
 SpringBoot 2.7.X
+JAVA 11.X
 
 ## 참고
 [자바 개발자를 위한 코틀린 입문_코틀린에서 람다를 다루는 방법](https://www.inflearn.com/course/lecture?courseSlug=java-to-kotlin&unitId=110633)
