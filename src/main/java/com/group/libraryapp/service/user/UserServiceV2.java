@@ -2,9 +2,9 @@ package com.group.libraryapp.service.user;
 
 import com.group.libraryapp.domain.User;
 import com.group.libraryapp.dto.user.request.user.UserCreateRequest;
-import com.group.libraryapp.dto.user.response.UserGetLoanHistoryResponse;
 import com.group.libraryapp.dto.user.response.UserResponse;
 import com.group.libraryapp.repository.book.UserLoanHistoryRepository;
+import com.group.libraryapp.repository.book.UserLoanHistoryView;
 import com.group.libraryapp.repository.user.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -62,7 +62,7 @@ public class UserServiceV2 {
     }
 
 
-    public List<UserGetLoanHistoryResponse> getUserLoanHistory(String name) {
+    public List<UserLoanHistoryView> getUserLoanHistory(String name) {
 //        이름을 이용해서 User 를 찾고
         User user = userRepository.findByName(name)
                 .orElseThrow(IllegalArgumentException::new);

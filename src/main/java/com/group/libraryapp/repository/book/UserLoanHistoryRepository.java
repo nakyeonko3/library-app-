@@ -1,7 +1,6 @@
 package com.group.libraryapp.repository.book;
 
 import com.group.libraryapp.domain.UserLoanHistory;
-import com.group.libraryapp.dto.user.response.UserGetLoanHistoryResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,5 +14,5 @@ public interface UserLoanHistoryRepository extends JpaRepository<UserLoanHistory
 
     Optional<UserLoanHistory> findByBookNameAndIsReturn(String bookName, boolean isReturn);
 
-    List<UserGetLoanHistoryResponse> findAllByUserId(long userId);
+    List<UserLoanHistoryView> findAllByUserId(long userId);
 }

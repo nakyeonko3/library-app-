@@ -2,7 +2,7 @@ package com.group.libraryapp.domain;
 
 import lombok.Getter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Getter
 @Entity

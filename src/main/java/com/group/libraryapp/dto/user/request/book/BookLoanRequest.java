@@ -1,12 +1,12 @@
 package com.group.libraryapp.dto.user.request.book;
 
-import com.sun.istack.NotNull;
+
+
 
 public class BookLoanRequest {
-    @NotNull
+
     private String userName;
 
-    @NotNull
     private String bookName;
 
     public BookLoanRequest() {

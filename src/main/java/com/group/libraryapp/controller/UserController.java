@@ -3,8 +3,8 @@ package com.group.libraryapp.controller;
 
 import com.group.libraryapp.dto.user.request.user.UserCreateRequest;
 import com.group.libraryapp.dto.user.request.user.UserUpdateRequest;
-import com.group.libraryapp.dto.user.response.UserGetLoanHistoryResponse;
 import com.group.libraryapp.dto.user.response.UserResponse;
+import com.group.libraryapp.repository.book.UserLoanHistoryView;
 import com.group.libraryapp.service.user.UserServiceV2;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @GetMapping("/loanHistory")
-    public List<UserGetLoanHistoryResponse> getLoanHistory(@RequestParam String name) {
+    public List<UserLoanHistoryView> getLoanHistory(@RequestParam String name) {
         return userServiceV2.getUserLoanHistory(name);
     }
 
