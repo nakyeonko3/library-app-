@@ -1,6 +1,5 @@
 use library;
 
-select * from book;
 
 create table book
 (
@@ -10,14 +9,6 @@ create table book
     unique key (name)
 );
 
-drop table book;
-drop table user_loan_history;
-
-delete
-from book;
-
-show tables;
-
 create table user_loan_history
 (
     id        bigint auto_increment,
@@ -26,6 +17,27 @@ create table user_loan_history
     is_return tinyint(1),
     primary key (id)
 );
+
+
+
+
+
+
+
+
+--
+
+select * from book;
+
+
+drop table book;
+drop table user_loan_history;
+
+delete
+from book;
+
+show tables;
+
 
 
 alter table user_loan_history
