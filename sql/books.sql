@@ -7,6 +7,8 @@ create table books
     primary key (id)
 );
 
+show tables;
+
 INSERT INTO books(name, price)
 values ('파이썬알고리즘인터뷰', 25000);
 

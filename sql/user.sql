@@ -6,7 +6,7 @@ values ('A', 10);
 commit;
 
 select *
-from user;
+from user where name='김길현';
 
 ALTER TABLE user
     drop name;

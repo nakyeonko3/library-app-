@@ -29,6 +29,7 @@ public class BookController {
         return bookService.getBooks();
     }
 
+
     @PostMapping("/loan")
     public void loanBook(@RequestBody BookLoanRequest request) {
         bookService.loanBook(request);
@@ -38,5 +39,6 @@ public class BookController {
     public void returnBook(@RequestBody BookReturnRequest request){
         bookService.returnBook(request);
     }
+
 
 }

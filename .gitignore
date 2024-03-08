@@ -52,6 +52,5 @@ gradle-app.setting
 .idea
 .vscode
 
-# application.yml
-application.yml
+# custom
 out

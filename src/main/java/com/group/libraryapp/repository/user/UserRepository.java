@@ -12,4 +12,5 @@ public interface UserRepository extends JpaRepository <User,Long>{
     boolean existsByName(String name);
     List<UserResponse> findByAgeBetween(int startage, int endage);
 
+    void deleteByName(String name);
 }

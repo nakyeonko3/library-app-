@@ -1,14 +1,17 @@
 package com.group.libraryapp.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class User {
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    List<UserLoanHistory> userLoanHistories;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     @Column(unique = true, nullable = false, length = 20)
     private String name;
     private Integer age;
@@ -39,5 +42,22 @@ public class User {
 
     public Integer getAge() {
         return age;
+    }
+
+    public void removeOneHistory(String bookName) {
+        this.userLoanHistories.removeIf(userLoanHistory -> bookName.equals(userLoanHistory.getBookName()));
+    }
+
+    public void loanBook(String bookName) {
+        this.userLoanHistories.add(new UserLoanHistory(this, bookName));
+    }
+
+    public void returnBook(String bookName) {
+        UserLoanHistory targetHistory = this.userLoanHistories.stream()
+                .filter(history -> history.getBookName()
+                        .equals(bookName))
+                .findFirst()
+                .orElseThrow(IllegalArgumentException::new);
+        targetHistory.doReturn();
     }
 }

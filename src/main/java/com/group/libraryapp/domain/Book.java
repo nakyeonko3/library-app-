@@ -9,12 +9,12 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false, length = 20, unique = true)
     private String name;
 
     public Book(String name) {
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("잘못된 name(%s)이 들어 왔습니다.");
+            throw new IllegalArgumentException(String.format("잘못된 name(%s)이 들어 왔습니다.",name));
         }
         this.name = name;
     }
