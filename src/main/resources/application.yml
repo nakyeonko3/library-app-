@@ -37,16 +37,3 @@ spring:
         show_sql: true
         format_sql: true
         dialect: org.hibernate.dialect.MySQL8Dialect
----
-spring:
-  config:
-    activate:
-      on-profile: fruit
-  datasource:
-    url: "jdbc:h2:mem:library;MODE=fruitShop"
-    username: "sa"
-    password: ""
-    driver-class-name: org.h2.Driver
-  jpa:
-    hibernate:
-      ddl-auto: create
