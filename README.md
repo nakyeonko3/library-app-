@@ -3,6 +3,10 @@
 - 간단한 도서관 앱을 만드는 프로젝트
 - `자바-스프링부트-서버개발-올인원-인프런` 강의를 바탕으로 해당 프로젝트를 구현함.
 
+## 예제 프로젝트 설명 및 공부 기록
+
+[4일차 PUT API, POST API 만들기 과제](https://velog.io/@badaclock/PUT-API-POST-API-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EA%B3%BC%EC%A0%9C)
+
 ## 연관 프로젝트
 
 [GitHub - backgom1/Inflearn\_BE0\_Study\_mini: 인프런 스터디 클럽 BE 0기 레포지토리 미니프로젝트 저장소](https://github.com/backgom1/Inflearn_BE0_Study_mini)
