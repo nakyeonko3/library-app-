@@ -22,19 +22,29 @@
 ## 실행 방법
 
 1. 프로젝트를 클론
-   $ git clone https://github.com/backgom1/Inflearn_BE0_Study_mini.git
+
+```
+ git clone https://github.com/backgom1/Inflearn_BE0_Study_mini.git
+```
 
 2. 프로젝트 디렉토리로 이동
-   $ cd Inflearn_BE0_Study_mini
-
-3. 의존성을 설치합니다.
-   $ ./gradlew build
+```
+ cd Inflearn_BE0_Study_mini
+```
+3. 의존성을 설치
+```
+./gradlew build
+```
 
 4. 서버를 실행합니다.
-   $ ./gradlew bootRun
+```
+./gradlew bootRun
+```
 
 5. 브라우저에서 다음 URL로 접속합니다.
-   http://localhost:8080
+```
+http://localhost:8080
+```
 
 ## 요구사항
 
