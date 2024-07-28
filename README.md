@@ -230,6 +230,11 @@ to {POST [/employee]}: There is already 'employeeController' bean method
 
 [RequestMappingHandlerMapping](https://docs.spring.io/spring-framework/docs/3.2.0.M1_to_3.2.0.M2/Spring%20Framework%203.2.0.M2/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerMapping.html) 은 스프링 웹 MVC 프레임워크 코드의 일부로 @Controller 클래스 안에 정의된 @RequestMapping 어노테이션을 인스턴스로 생성하는 클래스이다.
 
+
+## 연관 프로젝트
+
+[GitHub - backgom1/Inflearn\_BE0\_Study\_mini: 인프런 스터디 클럽 BE 0기 레포지토리 미니프로젝트 저장소](https://github.com/backgom1/Inflearn_BE0_Study_mini)
+
 ## 참고 자료
 
 - [자바-스프링부트-서버개발-올인원-인프런](https://www.inflearn.com/course/lecture?courseSlug=%EC%9E%90%EB%B0%94-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C-%EC%98%AC%EC%9D%B8%EC%9B%90&unitId=208208)
